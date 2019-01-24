@@ -13,16 +13,22 @@
     <form th:action="@{/search/results}" th:object="${searchForm}">
         <h2>Search by:</h2>
 
-        <ul class="form-group">
+<!--         <ul class="form-group">
             <li th:each="field : *{fields}">
                 <input type="radio" th:field="*{searchField}" th:value="${field}" th:checked="${field == searchField}"/>
                 <label th:for="${#ids.prev('searchField')}" th:text="${field.name}"></label>
             </li>
-        </ul>
+        </ul> -->
+        <label th:for="field" class="Job-Listing">Category</label>
+        <select class="Job-Listing">
+        	<option th:each="field :*{fields}"
+        			th:value="${field}"
+        			th:text="${field.name}"></option>
+		</select>
 
-        <div class="form-group">
+        <div class="Job-Listing">
             <label th:for="keyword">Keyword</label>
-            <input class="form-control" th:field="*{keyword}" />
+            <input class="Job-Listing" th:field="*{keyword}" />
         </div>
 
         <input type="submit" value="Search" />

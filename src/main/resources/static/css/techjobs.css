@@ -2,6 +2,9 @@
     margin-top: 72px;
 }
 
+input.job-listing, select.job-listing {
+	width: 400px;
+}
 td, th {
     padding: 10px;
 }
@@ -28,7 +31,7 @@ label {
     margin-right: 15px;
 }
 
-ul.form-group {
+/* ul.form-group {
     padding: 0;
 }
 
@@ -37,3 +40,4 @@ ul.form-group li {
     display: inline-block;
     padding-right: 15px;
 }
+ */
